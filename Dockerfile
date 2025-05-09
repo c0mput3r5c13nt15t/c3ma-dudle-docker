@@ -22,6 +22,7 @@ COPY ./scripts/container/ /usr/local/bin/
 
 COPY ./html/ /var/www/html/
 COPY ./cgi/ /var/www/html/cgi-bin/
+COPY ./dudle_data/ /var/www/html/cgi-bin/
 
 RUN sed -i \
         -e 's/^<Directory "\/var\/www\/html">/<Directory "\/var\/www\/html-original">/g' \
@@ -37,7 +38,7 @@ COPY ./skin/css/ /var/www/html/cgi-bin/css/
 COPY ./skin/conf/ /var/www/html/cgi-bin/
 
 RUN chmod -R go-w /var/www/html/cgi-bin
-RUN chgrp apache /var/www/html/cgi-bin
+RUN chown -R apache:apache /var/www/html/cgi-bin
 RUN chmod 775 /var/www/html/cgi-bin
 
 RUN cd /var/www/html/cgi-bin && \

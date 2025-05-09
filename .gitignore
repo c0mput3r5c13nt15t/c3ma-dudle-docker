@@ -1,2 +1,3 @@
+*.tar.gz
 cgi
-skin/conf/config.rb
+dudle_data

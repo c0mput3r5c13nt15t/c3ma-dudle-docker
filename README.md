@@ -19,6 +19,7 @@ If you have an existing DuD-Poll/Dudle installation and want to copy polls to th
 
     # cd /your/old/dudle
     # tar cvfz /srv/dudle/backup/dudle-backup.tar.gz `find . -maxdepth 1 -type d | egrep -v '\./(extensions|locale|\.git|\.bzr|css)|^\.$' | xargs`
+     -> Then unzip here into dudle_data
 
 If you want to customize your installation, add your CSS and artwork to 'skin/css/' and create/modify 'skin/conf/config.rb'. For more information on customization, see "Pimp your Installation" section in DuD-Poll README.
 

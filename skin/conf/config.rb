@@ -3,4 +3,4 @@
 #  "<a href='http://another.example.com/'>Me2</a>"
 #]
 
-#$conf.default_css = "css/my.css"
+$conf.default_css = "css/C3MA.css"
